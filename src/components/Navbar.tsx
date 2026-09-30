@@ -39,6 +39,22 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          {session?.user && (
+            <div className='flex items-center gap-8'>
+              <Link
+                href='/profile'
+                className='text-sm font-medium text-gray-300 transition hover:text-[#C2F800]'
+              >
+                Profile
+              </Link>
+              <Link
+                href='/dashboard'
+                className='text-sm font-medium text-gray-300 transition hover:text-[#C2F800]'
+              >
+                Dashboard
+              </Link>
+            </div>
+          )}
         </div>
 
         {/* Desktop Auth Buttons */}

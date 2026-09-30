@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from '@heroui/react'
+import Link from 'next/link'
 // import { redirect } from 'next/navigation'
 type SignInFormData = {
   email: string
@@ -75,7 +76,16 @@ const SignInPage = () => {
               return null
             }}
           >
-            <Label>Password</Label>
+            <div className='flex items-center justify-between'>
+              <Label>Password</Label>{' '}
+              <Link
+                href={'/forgot-password'}
+                className='text-xs font-medium text-black'
+              >
+                {' '}
+                Forgot your password?
+              </Link>
+            </div>
             <Input placeholder='Enter your password' />
             <Description>
               Must be at least 8 characters with 1 uppercase and 1 number
